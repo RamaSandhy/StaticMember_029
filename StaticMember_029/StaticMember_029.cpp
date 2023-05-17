@@ -4,7 +4,7 @@ using namespace std;
 
 class mahasiswa {
 public:
-	stattic int nim;
+	static int nim;
 	int id;
 	string nama;
 
@@ -12,3 +12,9 @@ public:
 	void printAll();
 	mahasiswa(string pnama) :nama(pnama) { setID(); }
 };
+
+int mahasiswa::nim = 0;
+
+void mahasiswa::setID() {
+	id = ++nim;
+}
